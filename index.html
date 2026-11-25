@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealMate | Corporate Catering & Meal Subsidy</title>
+  <meta name="description" content="Submit meal expenses, track your monthly meal allowance and register for company catering events.">
+  <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#main">Skip to main content</a>
+
+  <header class="landing-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="brand text-decoration-none" href="index.html"><img class="brand-logo" src="images/logo-mark.svg" width="34" height="34" alt=""> MealMate</a>
+      <a class="btn btn-outline-primary btn-sm" href="#roles">Open demo</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          <div class="col-lg-6">
+            <h1 class="fade-up">Meal benefits and team catering, <em>in one place</em>.</h1>
+            <p class="hero-lead mt-3 mb-4 fade-up delay-1">Submit a meal expense or pick your meal for a team lunch in under 30 seconds. HR reviews everything from one dashboard.</p>
+            <div class="d-flex flex-wrap gap-2 fade-up delay-2">
+              <a class="btn btn-accent btn-lg" href="#roles">Choose your role</a>
+            </div>
+            <div id="deniedMessage" class="alert alert-warning mt-4 d-none" role="alert">
+              <i class="bi bi-shield-lock" aria-hidden="true"></i> Please choose a role first. That page belongs to a different role.
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-photo">
+              <img src="images/hero-thali.jpg" width="960" height="723" alt="A steel thali with rice, poori and small bowls of curry on a canteen table">
+              <!-- A small example of the employee meal card (sample numbers) -->
+              <div class="meal-card meal-card-mini fade-up delay-3" aria-hidden="true">
+                <div class="meal-card-top">
+                  <span class="meal-card-brand"><img class="brand-logo" src="images/logo-mark.svg" width="28" height="28" alt=""> MealMate</span>
+                  <span class="meal-card-month">This month</span>
+                </div>
+                <div class="meal-card-label">Available this month</div>
+                <div class="meal-card-balance">₹1,850</div>
+                <div class="meal-card-bar"><span style="width: 38%; background: var(--mm-saffron)"></span></div>
+                <div class="meal-card-row"><span>₹1,150 used</span><span>Limit ₹3,000</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Role selection (demo login) -->
+    <section id="roles" class="py-5" aria-labelledby="rolesTitle">
+      <div class="container">
+        <h2 id="rolesTitle" class="h2 fw-bold mb-2">Choose a demo role</h2>
+        <p class="text-body-secondary mb-4">No password needed. Pick who you are and the app shows your own dashboard.</p>
+
+        <div class="row g-4">
+          <!-- Employee -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card role-card role-employee">
+              <div class="card-body">
+                <span class="role-icon" aria-hidden="true"><i class="bi bi-person-badge"></i></span>
+                <h3 class="h5 fw-bold">Employee</h3>
+                <ul class="role-list">
+                  <li>Submit meal expenses</li>
+                  <li>Track approval status and allowance</li>
+                  <li>Register for catering events</li>
+                </ul>
+                <div class="mt-auto">
+                  <label for="employeeSelect" class="form-label">Sign in as</label>
+                  <select id="employeeSelect" class="form-select mb-3"></select>
+                  <button class="btn btn-primary w-100" id="employeeBtn" type="button">Continue as employee</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HR Manager -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card role-card role-hr">
+              <div class="card-body">
+                <span class="role-icon" aria-hidden="true"><i class="bi bi-clipboard-check"></i></span>
+                <h3 class="h5 fw-bold">HR Manager</h3>
+                <ul class="role-list">
+                  <li>Approve or reject expenses</li>
+                  <li>Create catering events</li>
+                  <li>See meal counts and dietary needs</li>
+                </ul>
+                <div class="mt-auto">
+                  <label for="hrSelect" class="form-label">Sign in as</label>
+                  <select id="hrSelect" class="form-select mb-3">
+                    <option value="HR001">Meera Kapoor (People Team)</option>
+                  </select>
+                  <button class="btn btn-primary w-100" id="hrBtn" type="button">Continue as HR</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vendor -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card role-card role-vendor">
+              <div class="card-body">
+                <span class="role-icon" aria-hidden="true"><i class="bi bi-shop"></i></span>
+                <h3 class="h5 fw-bold">Food Vendor</h3>
+                <ul class="role-list">
+                  <li>See assigned catering orders</li>
+                  <li>Check meal quantities</li>
+                  <li>Read dietary requirements</li>
+                </ul>
+                <div class="mt-auto">
+                  <label for="vendorSelect" class="form-label">Sign in as</label>
+                  <select id="vendorSelect" class="form-select mb-3"></select>
+                  <button class="btn btn-primary w-100" id="vendorBtn" type="button">Continue as vendor</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature band -->
+    <section class="pb-5" aria-labelledby="featureTitle">
+      <div class="container">
+        <div class="feature-band row g-0">
+          <div class="col-lg-5">
+            <img src="images/biryani.jpg" width="960" height="638" alt="Chicken biryani served in a copper handi with raita" loading="lazy">
+          </div>
+          <div class="col-lg-7 feature-text">
+            <h2 id="featureTitle" class="h2 fw-bold mb-3">No more meal spreadsheets</h2>
+            <p class="mb-4">Expenses, allowances and catering orders stay together, so nothing gets lost in chats and emails.</p>
+            <ul class="list-unstyled feature-points mb-0">
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Only approved expenses count towards the monthly allowance.</span></li>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Meal counts come straight from employee registrations, one per person.</span></li>
+              <li><i class="bi bi-check2-circle" aria-hidden="true"></i><span>Vendors get a clear order with quantities and dietary needs.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>MealMate demo with sample data. No real payments.
+        <button class="btn btn-link btn-sm p-0 align-baseline" id="resetBtn" type="button">Reset demo data</button>
+      </span>
+      <span>Photos: <a href="https://commons.wikimedia.org/wiki/File:Indian_thali_with_poori_and_rice.jpg">Mallikarjunasj</a> (CC BY-SA 3.0),
+        <a href="https://commons.wikimedia.org/wiki/File:Chicken_Hyderabadi_Biryani.JPG">Dheerajk88</a> (CC BY-SA 4.0),
+        <a href="https://commons.wikimedia.org/wiki/File:South_Indian_Thali_Cropped.jpg">Tracy Hunter</a> (CC BY 2.0), via Wikimedia Commons</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/sample-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/pages/index.js"></script>
+</body>
+</html>

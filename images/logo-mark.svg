@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="MealMate logo">
+  <!-- MealMate logo: a lowercase "m" made of two food cloches (dome covers) on a serving tray -->
+  <rect width="48" height="48" rx="13" fill="#E59A2F"/>
+  <!-- the two domes -->
+  <path d="M12 33V24a6 6 0 0 1 12 0v9M24 24a6 6 0 0 1 12 0v9" fill="none" stroke="#1F4D3A" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- knobs on top of each dome -->
+  <circle cx="18" cy="13.4" r="2.3" fill="#1F4D3A"/>
+  <circle cx="30" cy="13.4" r="2.3" fill="#1F4D3A"/>
+  <!-- the tray -->
+  <path d="M8.5 38h31" stroke="#1F4D3A" stroke-width="3.4" stroke-linecap="round"/>
+</svg>
